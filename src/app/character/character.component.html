@@ -1,0 +1,9 @@
+<!-- <div class="main">
+  {{char.whole}}
+</div> -->
+<!-- <div class="pss" *ngFor="let c of pss">
+  {{c}}
+</div> -->
+<div class="options" *ngFor="let option of options" [class.chosen]="option === selectedOption" (click)="choose(option)">
+  {{option}}
+</div>

@@ -1,0 +1,14 @@
+%border-layout {
+    display: flex;
+    flex-direction: column;
+    // .north, .south {
+    //     width: 100%;
+    // }
+    .center-section {
+        flex: 1;
+        display: flex;
+    }
+    .center {
+        flex: 1;
+    }
+}

@@ -1,0 +1,27 @@
+:host {
+    margin: 0 5px;
+}
+
+/* .main, .pss {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.pss {
+    border-top: none;
+} */
+
+.options {
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+.options:not(:last-child) {
+    border-bottom: none;
+}
+.options:hover {
+    background-color: #748BA7;
+}
+.options.chosen {
+    background-color: #FFEDAA;
+}
