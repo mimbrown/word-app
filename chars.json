@@ -170,7 +170,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ʒ": {
@@ -208,7 +207,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "c": {
@@ -225,7 +223,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ɟ": {
@@ -242,7 +239,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ç": {
@@ -259,7 +255,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ʝ": {
@@ -276,7 +271,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "p": {
@@ -377,7 +371,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "g": {
@@ -394,7 +387,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ɡ": {
@@ -411,7 +403,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "x": {
@@ -428,7 +419,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ɣ": {
@@ -445,7 +435,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "q": {
@@ -462,7 +451,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ɢ": {
@@ -479,7 +467,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "χ": {
@@ -496,7 +483,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ʁ": {
@@ -513,7 +499,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ħ": {
@@ -630,7 +615,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ɱ": {
@@ -661,7 +645,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ɴ": {
@@ -678,7 +661,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "l": {
@@ -712,7 +694,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ʟ": {
@@ -726,10 +707,26 @@
     "labial": false,
     "coronal": false,
     "dorsal": true,
-    "high": false,
+    "high": true,
     "low": false,
     "back": true,
-    "tense": false,
+    "tongue_root": false
+  },
+  "ɺ": {
+    "voice": true,
+    "SG": false,
+    "CG": false,
+    "son": true,
+    "cons": true,
+    "cont": true,
+    "nasal": false,
+    "labial": false,
+    "coronal": true,
+    "lateral": true,
+    "ant": true,
+    "strident": false,
+    "dist": false,
+    "dorsal": false,
     "tongue_root": false
   },
   "ʙ": {
@@ -794,7 +791,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ɹ": {
@@ -828,7 +824,23 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
+    "tongue_root": false
+  },
+  "ʍ": {
+    "voice": false,
+    "SG": false,
+    "CG": false,
+    "son": false,
+    "cons": true,
+    "cont": true,
+    "nasal": false,
+    "labial": true,
+    "round": true,
+    "coronal": false,
+    "dorsal": true,
+    "high": true,
+    "low": false,
+    "back": true,
     "tongue_root": false
   },
   "w": {
@@ -846,7 +858,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": false
   },
   "ʋ": {
@@ -878,7 +889,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": false
   },
   "ɰ": {
@@ -895,7 +905,65 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
+    "tongue_root": false
+  },
+  "ʜ": {
+    "voice": false,
+    "SG": true,
+    "CG": false,
+    "son": false,
+    "cons": false,
+    "cont": true,
+    "nasal": false,
+    "labial": false,
+    "coronal": false,
+    "dorsal": false,
+    "tongue_root": false
+  },
+  "ʢ": {
+    "voice": true,
+    "SG": true,
+    "CG": false,
+    "son": false,
+    "cons": false,
+    "cont": true,
+    "nasal": false,
+    "labial": false,
+    "coronal": false,
+    "dorsal": false,
+    "tongue_root": false
+  },
+  "ʡ": {
+    "voice": false,
+    "SG": false,
+    "CG": true,
+    "son": false,
+    "cons": false,
+    "cont": false,
+    "nasal": false,
+    "labial": false,
+    "coronal": false,
+    "dorsal": false,
+    "tongue_root": false
+  },
+  "ɧ": {
+    "voice": false,
+    "SG": false,
+    "CG": false,
+    "son": false,
+    "cons": true,
+    "cont": true,
+    "nasal": false,
+    "labial": false,
+    "coronal": true,
+    "lateral": false,
+    "ant": false,
+    "strident": true,
+    "dist": true,
+    "dorsal": true,
+    "high": true,
+    "low": false,
+    "back": true,
     "tongue_root": false
   },
   "i": {
@@ -912,7 +980,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -931,7 +998,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -950,7 +1016,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -970,7 +1035,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -990,7 +1054,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1010,7 +1073,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1029,7 +1091,6 @@
     "high": false,
     "low": false,
     "back": false,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1048,7 +1109,6 @@
     "high": false,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1068,7 +1128,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1088,7 +1147,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1107,7 +1165,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1126,7 +1183,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1146,7 +1202,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1166,7 +1221,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1185,7 +1239,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1204,7 +1257,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1223,7 +1275,6 @@
     "high": false,
     "low": false,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1242,7 +1293,6 @@
     "high": false,
     "low": true,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1262,7 +1312,6 @@
     "high": false,
     "low": true,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1281,7 +1330,6 @@
     "high": false,
     "low": true,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1301,7 +1349,6 @@
     "high": false,
     "low": true,
     "back": true,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1320,7 +1367,6 @@
     "high": false,
     "low": true,
     "back": false,
-    "tense": true,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1340,7 +1386,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1360,7 +1405,6 @@
     "high": true,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1380,7 +1424,6 @@
     "high": false,
     "low": false,
     "back": false,
-    "tense": true,
     "tongue_root": true,
     "ATR": true,
     "RTR": false
@@ -1400,7 +1443,6 @@
     "high": false,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1419,7 +1461,6 @@
     "high": false,
     "low": false,
     "back": false,
-    "tense": false,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
@@ -1438,7 +1479,6 @@
     "high": true,
     "low": false,
     "back": true,
-    "tense": true,
     "tongue_root": true,
     "ATR": false,
     "RTR": false
