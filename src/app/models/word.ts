@@ -1,11 +1,11 @@
 import { AbstractSegmental } from './abstract-segmental';
 import { Segmental } from './segmental';
 import { Suprasegmental } from './suprasegmental';
-import { check } from '../data/inventory';
+import { check } from '../data/check';
+import { inventory } from '../data/inventory';
 
 export class Word {
     segments: AbstractSegmental[];
-    static charDefinitions;
 
     constructor (word: string) {
         this.parse(word);
@@ -43,9 +43,9 @@ export class Word {
           continue;
         }
       }
-      console.log(segments);
-      console.log(word);
-      console.log(this.readable);
+      // console.log(segments);
+      // console.log(word);
+      // console.log(this.readable);
       // return segments;
       // let curr, next, marks, whole, ambiguities;
       // let includeNext;
@@ -100,31 +100,63 @@ export class Word {
     }
   
     collectWord (word: 'string', i: number, isPre: boolean = false): number {
-      let diacritics, char, next;
+      let char = '';
+      let curr = word[i];
+      let isAffricate;
       if (isPre) {
-        diacritics = word[i];
-        next = word[++i];
-        while (!check.isChar(next)) {
-          diacritics += next;
-          next = word[++i];
+        while (check.isPreDiacritic(curr)) {
+          char += curr;
+          curr = word[++i];
         }
       }
-      char = word[i];
-      char = new Segmental(char, check.getDefinition(char));
-      if (diacritics) {
-        char.prepend(diacritics);
+      if (check.isChar(curr)) {
+        char += curr;
+        curr = word[++i];
       }
-      next = word[++i];
-      diacritics = '';
-      while (check.isDiacritic(next)) {
-        diacritics += next;
-        next = word[++i];
+      while (check.isDiacritic(curr)) {
+        char += curr;
+        if (curr === '͡') {
+          isAffricate = true;
+        }
+        curr = word[++i];
       }
-      if (diacritics) {
-        char.append(diacritics);
+      if (isAffricate) {
+        if (check.isChar(curr)) {
+          char += curr;
+          curr = word[++i];
+        }
+        while (check.isDiacritic(curr)) {
+          char += curr;
+          curr = word[++i];
+        }
       }
-      this.segments.push(char);
-      return i-1;
+      this.segments.push(inventory.getSegment(char));
+      return i - 1;
+      // let diacritics, char, next;
+      // if (isPre) {
+      //   diacritics = word[i];
+      //   next = word[++i];
+      //   while (!check.isChar(next)) {
+      //     diacritics += next;
+      //     next = word[++i];
+      //   }
+      // }
+      // char = word[i];
+      // // char = new Segmental(char, check.getDefinition(char));
+      // if (diacritics) {
+      //   char.prepend(diacritics);
+      // }
+      // next = word[++i];
+      // diacritics = '';
+      // while (check.isDiacritic(next)) {
+      //   diacritics += next;
+      //   next = word[++i];
+      // }
+      // if (diacritics) {
+      //   char.append(diacritics);
+      // }
+      // this.segments.push(char);
+      // return i-1;
     }
 
     get readable() {

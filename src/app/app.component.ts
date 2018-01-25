@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { WordParserService } from './word-parser.service';
 import { Word } from './models/word';
 
+import { inventory } from './data/inventory';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -38,6 +40,7 @@ export class AppComponent {
       this.data = this.inputs.map(word => new Word(word));
     }
     this.inputs = [''];
+    console.log(inventory.getSegments());
   }
 
   fileChange(event) {
