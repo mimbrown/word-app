@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { WordParserService } from './word-parser.service';
 import { CharacterComponent } from './character/character.component';
+import { EnvironmentComponent } from './environment/environment.component';
+import { FeatureDisplayComponent } from './feature-display/feature-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharacterComponent
+    CharacterComponent,
+    EnvironmentComponent,
+    FeatureDisplayComponent
   ],
   exports: [
     CharacterComponent

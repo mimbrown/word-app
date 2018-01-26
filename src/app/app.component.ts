@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { WordParserService } from './word-parser.service';
 import { Word } from './models/word';
+import { Segmental } from './models/segmental';
 
 import { inventory } from './data/inventory';
 
@@ -19,6 +20,9 @@ export class AppComponent {
   inputFile: File;
   data: Word[];
   enterData: boolean = true;
+  vowels: Segmental[];
+  consonants: Segmental[];
+  environments: Segmental[] = [];
 
   constructor (private word: WordParserService) { }
 
@@ -37,10 +41,11 @@ export class AppComponent {
       fileReader.onload = e => this.parse(fileReader.result);
       fileReader.readAsText(inputFile); 
     } else {
-      this.data = this.inputs.map(word => new Word(word));
+      this.data = inventory.words = this.inputs.map(word => new Word(word));
+      this.consonants = inventory.getConsonants();
+      this.vowels = inventory.getVowels();
     }
     this.inputs = [''];
-    console.log(inventory.getSegments());
   }
 
   fileChange(event) {
@@ -48,6 +53,10 @@ export class AppComponent {
     if(fileList.length > 0) {
       this.inputFile = fileList[0];
     }
+  }
+
+  viewEnvironment (segment: Segmental): void {
+    this.environments.push(segment);
   }
 
   parse (xml: string) {
@@ -62,7 +71,9 @@ export class AppComponent {
         data.push(new Word(child.firstElementChild.firstElementChild.innerHTML));
       }
     }
-    this.data = data;
+    this.data = inventory.words = data;
+    this.consonants = inventory.getConsonants();
+    this.vowels = inventory.getVowels();
     // this.currentWord = input;
     // this.parsedWord = this.word.parse(input);
     // this.stage = 1;

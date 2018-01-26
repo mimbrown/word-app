@@ -1,0 +1,31 @@
+<div class="immediate-env">
+  <feature-display [features]="previousEnvironment"></feature-display>
+  <table>
+    <tr>
+      <th colspan="2">{{segment.readable}}</th>
+    </tr>
+    <tr *ngFor="let environment of environments">
+      <td class="prev">
+        {{environment.prev}}
+      </td>
+      <td class="next">
+        {{environment.next}}
+      </td>
+    </tr>
+  </table>
+  <feature-display [features]="nextEnvironment"></feature-display>
+</div>
+<table class="word-environment">
+  <tr>
+    <td>Occurs</td>
+    <td>Initially</td>
+    <td>Medially</td>
+    <td>Finally</td>
+  </tr>
+  <tr>
+    <td>Word</td>
+    <td>{{getYN('wordInitial')}}</td>
+    <td>{{getYN('wordMedial')}}</td>
+    <td>{{getYN('wordFinal')}}</td>
+  </tr>
+</table>

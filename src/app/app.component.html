@@ -1,20 +1,55 @@
-<div class="north header">
+<div class="north header master">
   <div class="title">
     The Assistant to the Phonology Assistant (aka Steve Parker's Baby)
   </div>
 </div>
 <div class="center-section">
-  <div class="west data-view">
-    <div *ngFor="let input of data" class="row">
-      <span>{{input.readable}}</span>
-      <button class="select" (click)="parse(input)">Explore</button>
+  <div class="west data-view border">
+    <div class="north header">
+      <div class="title">
+        Data
+      </div>
+    </div>
+    <div class="center">
+      <table>
+        <tr *ngFor="let input of data">
+          <td>{{input.readable}}</td>
+          <td><button class="select" (click)="parse(input)">Explore</button></td>
+        </tr>
+      </table>
     </div>
   </div>
-  <div class="center edit-view">
-    <div *ngIf="stage === 1" class="word-exploded">
+  <div class="center vbox">
+      <div class="header">
+        <div class="title">
+          Explore
+        </div>
+      </div>
+    <div class="phonemes">
+      <div class="phoneme-list">
+        <span>
+          Consonants:
+        </span>
+        <span *ngFor="let segment of consonants" class="phoneme" (click)="viewEnvironment(segment)">
+          {{segment.readable}}
+        </span>
+      </div>
+      <div class="phoneme-list">
+        <span>
+          Vowels:
+        </span>
+        <span *ngFor="let segment of vowels" class="phoneme" (click)="viewEnvironment(segment)">
+          {{segment.readable}}
+        </span>
+      </div>
+    </div>
+    <div class="environments">
+      <environment *ngFor="let segment of environments" [segment]="segment"></environment>
+    </div>
+    <!-- <div *ngIf="stage === 1" class="word-exploded">
       <character *ngFor="let c of parsedWord" [parsed]="c" (choice)="refresh()"></character>
     </div>
-    <button *ngIf="stage > 0" [disabled]="stage !== 1" (click)="extract()">{{currentWord}}</button>
+    <button *ngIf="stage > 0" [disabled]="stage !== 1" (click)="extract()">{{currentWord}}</button> -->
   </div>
 </div>
 <div *ngIf="enterData" class="entry-view">

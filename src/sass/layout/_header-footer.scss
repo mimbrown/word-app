@@ -1,8 +1,12 @@
 .header, .footer {
-    height: 20px;
+    // height: 20px;
     padding: 10px;
     display: flex;
     align-items: center;
     color: white;
     background-color: #2B4970;
+}
+
+.header.master {
+    border-bottom: 1px solid white;
 }

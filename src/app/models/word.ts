@@ -162,6 +162,32 @@ export class Word {
     get readable() {
       return this.segments.map(segment => segment.readable).join('');
     }
+
+    get normalSegments() {
+      return this.segments.filter(segment => segment instanceof Segmental);
+    }
+
+    getEnvironmentFor (segment: Segmental, prevEnv: any, nextEnv: any, otherEnv: any): string[] {
+      let environment = [];
+      let segments = this.normalSegments;
+      let prev, next;
+      segments.forEach((seg, i) => {
+        if (segment === seg) {
+          prev = segments[i-1];
+          next = segments[i+1];
+          if (prev) prev.fillEnvironment(prevEnv);
+          else otherEnv.wordInitial = true;
+          if (next) next.fillEnvironment(nextEnv);
+          else otherEnv.wordFinal = true;
+          if (prev && next) otherEnv.wordMedial = true;
+          environment.push({
+            prev: prev ? prev.readable : '#',
+            next: next ? next.readable : '#'
+          });
+        }
+      });
+      return environment;
+    }
     
     //   getPSS (char: string) {
     //     let set = new Set();

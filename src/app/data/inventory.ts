@@ -20,5 +20,16 @@ export const inventory = {
             return segment;
         }
     },
-    getSegments: () => segments
+    getSegments: () => segments,
+    getConsonants: () => {
+        let consonants = [];
+        segments.forEach(segment => segment.type === 'C' && consonants.push(segment));
+        return consonants;
+    },
+    getVowels: () => {
+        let vowels = [];
+        segments.forEach(segment => segment.type === 'V' && vowels.push(segment));
+        return vowels;
+    },
+    words: null
 }

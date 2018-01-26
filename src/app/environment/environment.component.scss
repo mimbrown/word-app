@@ -1,0 +1,44 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.immediate-env {
+    display: flex;
+}
+
+.word-environment {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+}
+
+tr {
+    width: 60px;
+}
+
+th {
+    border: 1px solid black;
+    border-top: none;
+}
+
+.prev {
+    border-right: 1px solid black;
+    text-align: right;
+}
+
+.next {
+    border-left: 1px solid black;
+    text-align: left;
+}
+
+.prev, .next {
+    padding: 0 5px;
+}

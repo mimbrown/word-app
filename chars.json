@@ -1,5 +1,6 @@
 {
   "t": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -17,6 +18,7 @@
     "tongue_root": false
   },
   "d": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -34,6 +36,7 @@
     "tongue_root": false
   },
   "s": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -51,6 +54,7 @@
     "tongue_root": false
   },
   "z": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -68,6 +72,7 @@
     "tongue_root": false
   },
   "ɬ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -85,6 +90,7 @@
     "tongue_root": false
   },
   "ɮ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -102,6 +108,7 @@
     "tongue_root": false
   },
   "θ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -119,6 +126,7 @@
     "tongue_root": false
   },
   "ð": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -136,6 +144,7 @@
     "tongue_root": false
   },
   "ʃ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -153,6 +162,7 @@
     "tongue_root": false
   },
   "ɕ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -173,6 +183,7 @@
     "tongue_root": false
   },
   "ʒ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -190,6 +201,7 @@
     "tongue_root": false
   },
   "ʑ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -210,6 +222,7 @@
     "tongue_root": false
   },
   "c": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -226,6 +239,7 @@
     "tongue_root": false
   },
   "ɟ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -242,6 +256,7 @@
     "tongue_root": false
   },
   "ç": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -258,6 +273,7 @@
     "tongue_root": false
   },
   "ʝ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -274,6 +290,7 @@
     "tongue_root": false
   },
   "p": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -288,6 +305,7 @@
     "tongue_root": false
   },
   "b": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -302,6 +320,7 @@
     "tongue_root": false
   },
   "f": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -316,6 +335,7 @@
     "tongue_root": false
   },
   "v": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -330,6 +350,7 @@
     "tongue_root": false
   },
   "ɸ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -344,6 +365,7 @@
     "tongue_root": false
   },
   "β": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -358,6 +380,7 @@
     "tongue_root": false
   },
   "k": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -374,6 +397,7 @@
     "tongue_root": false
   },
   "g": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -390,6 +414,7 @@
     "tongue_root": false
   },
   "ɡ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -406,6 +431,7 @@
     "tongue_root": false
   },
   "x": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -422,6 +448,7 @@
     "tongue_root": false
   },
   "ɣ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -438,6 +465,7 @@
     "tongue_root": false
   },
   "q": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -454,6 +482,7 @@
     "tongue_root": false
   },
   "ɢ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -470,6 +499,7 @@
     "tongue_root": false
   },
   "χ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -486,6 +516,7 @@
     "tongue_root": false
   },
   "ʁ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -502,6 +533,7 @@
     "tongue_root": false
   },
   "ħ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -517,6 +549,7 @@
     "RTR": true
   },
   "ʕ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -532,6 +565,7 @@
     "RTR": true
   },
   "h": {
+    "type": "C",
     "voice": false,
     "SG": true,
     "CG": false,
@@ -545,6 +579,7 @@
     "tongue_root": false
   },
   "ɦ": {
+    "type": "C",
     "voice": true,
     "SG": true,
     "CG": false,
@@ -558,6 +593,7 @@
     "tongue_root": false
   },
   "ʔ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": true,
@@ -571,6 +607,7 @@
     "tongue_root": false
   },
   "m": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -585,6 +622,7 @@
     "tongue_root": false
   },
   "n": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -602,6 +640,7 @@
     "tongue_root": false
   },
   "ŋ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -618,6 +657,7 @@
     "tongue_root": false
   },
   "ɱ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -632,6 +672,7 @@
     "tongue_root": false
   },
   "ɲ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -648,6 +689,7 @@
     "tongue_root": false
   },
   "ɴ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -664,6 +706,7 @@
     "tongue_root": false
   },
   "l": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -681,6 +724,7 @@
     "tongue_root": false
   },
   "ʎ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -697,6 +741,7 @@
     "tongue_root": false
   },
   "ʟ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -713,6 +758,7 @@
     "tongue_root": false
   },
   "ɺ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -730,6 +776,7 @@
     "tongue_root": false
   },
   "ʙ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -744,6 +791,7 @@
     "tongue_root": false
   },
   "r": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -761,6 +809,7 @@
     "tongue_root": false
   },
   "ɾ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -778,6 +827,7 @@
     "tongue_root": false
   },
   "ʀ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -794,6 +844,7 @@
     "tongue_root": false
   },
   "ɹ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -811,6 +862,7 @@
     "tongue_root": false
   },
   "j": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -827,6 +879,7 @@
     "tongue_root": false
   },
   "ʍ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -844,6 +897,7 @@
     "tongue_root": false
   },
   "w": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -861,6 +915,7 @@
     "tongue_root": false
   },
   "ʋ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -875,6 +930,7 @@
     "tongue_root": false
   },
   "ɥ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -892,6 +948,7 @@
     "tongue_root": false
   },
   "ɰ": {
+    "type": "C",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -908,6 +965,7 @@
     "tongue_root": false
   },
   "ʜ": {
+    "type": "C",
     "voice": false,
     "SG": true,
     "CG": false,
@@ -921,6 +979,7 @@
     "tongue_root": false
   },
   "ʢ": {
+    "type": "C",
     "voice": true,
     "SG": true,
     "CG": false,
@@ -934,6 +993,7 @@
     "tongue_root": false
   },
   "ʡ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": true,
@@ -947,6 +1007,7 @@
     "tongue_root": false
   },
   "ɧ": {
+    "type": "C",
     "voice": false,
     "SG": false,
     "CG": false,
@@ -967,6 +1028,7 @@
     "tongue_root": false
   },
   "i": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -985,6 +1047,7 @@
     "RTR": false
   },
   "ɪ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1003,6 +1066,7 @@
     "RTR": false
   },
   "ɨ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1021,6 +1085,7 @@
     "RTR": false
   },
   "ʉ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1040,6 +1105,7 @@
     "RTR": false
   },
   "u": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1059,6 +1125,7 @@
     "RTR": false
   },
   "ʊ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1078,6 +1145,7 @@
     "RTR": false
   },
   "e": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1096,6 +1164,7 @@
     "RTR": false
   },
   "ɛ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1114,6 +1183,7 @@
     "RTR": false
   },
   "o": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1133,6 +1203,7 @@
     "RTR": false
   },
   "ɵ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1152,6 +1223,7 @@
     "RTR": false
   },
   "ɤ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1170,6 +1242,7 @@
     "RTR": false
   },
   "ɘ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1188,6 +1261,7 @@
     "RTR": false
   },
   "ɔ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1207,6 +1281,7 @@
     "RTR": false
   },
   "ɞ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1226,6 +1301,7 @@
     "RTR": false
   },
   "ʌ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1244,6 +1320,7 @@
     "RTR": false
   },
   "ɜ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1262,6 +1339,7 @@
     "RTR": false
   },
   "ɐ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1280,6 +1358,7 @@
     "RTR": false
   },
   "a": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1298,6 +1377,7 @@
     "RTR": false
   },
   "ɶ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1317,6 +1397,7 @@
     "RTR": false
   },
   "ɑ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1335,6 +1416,7 @@
     "RTR": false
   },
   "ɒ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1354,6 +1436,7 @@
     "RTR": false
   },
   "æ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1372,6 +1455,7 @@
     "RTR": false
   },
   "y": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1391,6 +1475,7 @@
     "RTR": false
   },
   "ʏ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1410,6 +1495,7 @@
     "RTR": false
   },
   "ø": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1429,6 +1515,7 @@
     "RTR": false
   },
   "œ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1448,6 +1535,7 @@
     "RTR": false
   },
   "ə": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,
@@ -1466,6 +1554,7 @@
     "RTR": false
   },
   "ɯ": {
+    "type": "V",
     "voice": true,
     "SG": false,
     "CG": false,

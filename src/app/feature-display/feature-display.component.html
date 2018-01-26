@@ -1,0 +1,35 @@
+<div>
+  Features
+</div>
+<table>
+  <tr>
+    <th rowspan="3">Place</th>
+    <td>Labial: {{getYN(features.labial)}}</td>
+  </tr>
+  <tr>
+    <td>Coronal: {{getYN(features.coronal)}}</td>
+  </tr>
+  <tr>
+    <td>Dorsal: {{getYN(features.dorsal)}}</td>
+  </tr>
+</table>
+
+<table>
+  <tr *ngIf="inFeatures('voice')"><td>{{getFeature('voice')}}</td></tr>
+  <tr *ngIf="inFeatures('SG')"><td>{{getFeature('SG')}}</td></tr>
+  <tr *ngIf="inFeatures('CG')"><td>{{getFeature('CG')}}</td></tr>
+  <tr *ngIf="inFeatures('son')"><td>{{getFeature('son')}}</td></tr>
+  <tr *ngIf="inFeatures('cons')"><td>{{getFeature('cons')}}</td></tr>
+  <tr *ngIf="inFeatures('cont')"><td>{{getFeature('cont')}}</td></tr>
+  <tr *ngIf="inFeatures('nasal')"><td>{{getFeature('nasal')}}</td></tr>
+  <tr *ngIf="inFeatures('round')"><td>{{getFeature('round')}}</td></tr>
+  <tr *ngIf="inFeatures('lateral')"><td>{{getFeature('lateral')}}</td></tr>
+  <tr *ngIf="inFeatures('ant')"><td>{{getFeature('ant')}}</td></tr>
+  <tr *ngIf="inFeatures('strident')"><td>{{getFeature('strident')}}</td></tr>
+  <tr *ngIf="inFeatures('dist')"><td>{{getFeature('dist')}}</td></tr>
+  <tr *ngIf="inFeatures('high')"><td>{{getFeature('high')}}</td></tr>
+  <tr *ngIf="inFeatures('low')"><td>{{getFeature('low')}}</td></tr>
+  <tr *ngIf="inFeatures('back')"><td>{{getFeature('back')}}</td></tr>
+  <tr *ngIf="inFeatures('ATR')"><td>{{getFeature('ATR')}}</td></tr>
+  <tr *ngIf="inFeatures('RTR')"><td>{{getFeature('RTR')}}</td></tr>
+</table>
