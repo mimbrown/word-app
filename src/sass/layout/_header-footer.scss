@@ -1,5 +1,5 @@
 .header, .footer {
-    // height: 20px;
+    min-height: 50px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -7,6 +7,6 @@
     background-color: #2B4970;
 }
 
-.header.master {
+.header {
     border-bottom: 1px solid white;
 }

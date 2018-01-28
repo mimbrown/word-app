@@ -6,6 +6,8 @@ export class Segmental extends AbstractSegmental {
     mid: string;
     post: string;
 
+    normalChars: string;
+
     // features
     type: string;
     voice: boolean;
@@ -39,6 +41,7 @@ export class Segmental extends AbstractSegmental {
         let pre = '',
             mid,
             post = '',
+            normalChars = '',
             first, second, isAffricate;
         let i = 0;
         let curr = char[i];
@@ -48,6 +51,7 @@ export class Segmental extends AbstractSegmental {
         }
         if (check.isChar(curr)) {
             first = check.getDefinition(curr);
+            normalChars += first;
             curr = char[++i];
         }
         while (curr && check.isDiacritic(curr)) {
@@ -62,6 +66,7 @@ export class Segmental extends AbstractSegmental {
             post = '';
             if (check.isChar(curr)) {
                 second = check.getDefinition(curr);
+                normalChars += second;
                 curr = char[++i];
             }
             while (curr && check.isDiacritic(curr)) {
@@ -79,6 +84,18 @@ export class Segmental extends AbstractSegmental {
         return (this.labial && seg.labial)
             || (this.coronal && seg.coronal)
             || (this.dorsal && seg.dorsal)
+    }
+
+    get stop () {
+        return this.son === false && this.cont === false && !this.affricate;
+    }
+
+    get affricate () {
+        return this.normalChars.length > 1;
+    }
+
+    get fricative () {
+        return this.son === false && this.cont && !this.affricate;
     }
 
     fillEnvironment (environment: any): void {

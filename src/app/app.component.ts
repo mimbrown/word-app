@@ -20,9 +20,8 @@ export class AppComponent {
   inputFile: File;
   data: Word[];
   enterData: boolean = true;
-  vowels: Segmental[];
   consonants: Segmental[];
-  environments: Segmental[] = [];
+  vowels: Segmental[];
 
   constructor (private word: WordParserService) { }
 
@@ -55,10 +54,6 @@ export class AppComponent {
     }
   }
 
-  viewEnvironment (segment: Segmental): void {
-    this.environments.push(segment);
-  }
-
   parse (xml: string) {
     let oParser = new DOMParser();
     let xmlObject = oParser.parseFromString(xml, "text/xml");
@@ -67,7 +62,8 @@ export class AppComponent {
     let child;
     for (let k in children) {
       child = children[k];
-      if (child.className === 'MoStemAllomorph') {
+      // if (child.className === 'MoStemAllomorph') {
+      if (child.className === 'LexPronunciation') {
         data.push(new Word(child.firstElementChild.firstElementChild.innerHTML));
       }
     }

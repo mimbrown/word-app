@@ -13,7 +13,7 @@ export class FeatureDisplayComponent implements OnInit {
   }
 
   getYN (bool: boolean): string {
-    return bool ? 'Y' : 'N';
+    return bool ? 'fa fa-check' : 'fa fa-times';
   }
 
   inFeatures (feature: string): boolean {

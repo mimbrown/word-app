@@ -7,13 +7,18 @@ import { WordParserService } from './word-parser.service';
 import { CharacterComponent } from './character/character.component';
 import { EnvironmentComponent } from './environment/environment.component';
 import { FeatureDisplayComponent } from './feature-display/feature-display.component';
+import { ExploreEnvironmentsComponent } from './explore-environments/explore-environments.component';
+import { TabpanelComponent, Tab } from './components/core/tabpanel/tabpanel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharacterComponent,
     EnvironmentComponent,
-    FeatureDisplayComponent
+    FeatureDisplayComponent,
+    ExploreEnvironmentsComponent,
+    TabpanelComponent,
+    Tab
   ],
   exports: [
     CharacterComponent

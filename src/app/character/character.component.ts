@@ -11,7 +11,7 @@ export class CharacterComponent implements OnInit {
   @Input() parsed;
   @Output() choice = new EventEmitter<string>();
   private pss;
-  private options: string[];
+  options: string[];
   private selectedOption: string;
   constructor(private word: WordParserService) { }
 

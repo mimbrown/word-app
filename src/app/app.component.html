@@ -1,4 +1,4 @@
-<div class="north header master">
+<div class="north header">
   <div class="title">
     The Assistant to the Phonology Assistant (aka Steve Parker's Baby)
   </div>
@@ -20,13 +20,17 @@
     </div>
   </div>
   <div class="center vbox">
-      <div class="header">
-        <div class="title">
-          Explore
-        </div>
+    <div class="header">
+      <div class="title">
+        Analyze
       </div>
-    <div class="phonemes">
-      <div class="phoneme-list">
+    </div>
+    <tabpanel>
+      <tab tabTitle="Ambiguous Segments">Testing</tab>
+      <tab tabTitle="Suspicious Pairs"><explore-environments [consonants]="consonants" [vowels]="vowels"></explore-environments></tab>
+    </tabpanel>
+    <!-- <div class="phonemes"> -->
+      <!-- <div class="phoneme-list">
         <span>
           Consonants:
         </span>
@@ -41,11 +45,11 @@
         <span *ngFor="let segment of vowels" class="phoneme" (click)="viewEnvironment(segment)">
           {{segment.readable}}
         </span>
-      </div>
-    </div>
+      </div> -->
+    <!-- </div>
     <div class="environments">
       <environment *ngFor="let segment of environments" [segment]="segment"></environment>
-    </div>
+    </div> -->
     <!-- <div *ngIf="stage === 1" class="word-exploded">
       <character *ngFor="let c of parsedWord" [parsed]="c" (choice)="refresh()"></character>
     </div>

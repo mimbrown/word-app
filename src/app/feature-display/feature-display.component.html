@@ -1,19 +1,20 @@
-<div>
-  Features
-</div>
 <table>
   <tr>
-    <th rowspan="3">Place</th>
-    <td>Labial: {{getYN(features.labial)}}</td>
+    <th colspan="2">Place</th>
   </tr>
   <tr>
-    <td>Coronal: {{getYN(features.coronal)}}</td>
+    <td>Labial</td>
+    <td><span [class]="getYN(features.labial)"></span></td>
   </tr>
   <tr>
-    <td>Dorsal: {{getYN(features.dorsal)}}</td>
+    <td>Coronal</td>
+    <td><span [class]="getYN(features.coronal)"></span></td>
+  </tr>
+  <tr>
+    <td>Dorsal</td>
+    <td><span [class]="getYN(features.dorsal)"></span></td>
   </tr>
 </table>
-
 <table>
   <tr *ngIf="inFeatures('voice')"><td>{{getFeature('voice')}}</td></tr>
   <tr *ngIf="inFeatures('SG')"><td>{{getFeature('SG')}}</td></tr>

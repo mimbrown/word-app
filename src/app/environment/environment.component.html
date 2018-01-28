@@ -1,6 +1,11 @@
 <div class="immediate-env">
-  <feature-display [features]="previousEnvironment"></feature-display>
-  <table>
+  <div>
+    <div class="feature-heading">
+      Preceding
+    </div>
+    <feature-display [features]="previousEnvironment"></feature-display>
+  </div>
+  <table class="y-chart">
     <tr>
       <th colspan="2">{{segment.readable}}</th>
     </tr>
@@ -13,19 +18,26 @@
       </td>
     </tr>
   </table>
-  <feature-display [features]="nextEnvironment"></feature-display>
+  <div>
+    <div class="feature-heading">
+      Following
+    </div>
+    <feature-display [features]="nextEnvironment"></feature-display>
+  </div>
 </div>
-<table class="word-environment">
-  <tr>
-    <td>Occurs</td>
-    <td>Initially</td>
-    <td>Medially</td>
-    <td>Finally</td>
-  </tr>
-  <tr>
-    <td>Word</td>
-    <td>{{getYN('wordInitial')}}</td>
-    <td>{{getYN('wordMedial')}}</td>
-    <td>{{getYN('wordFinal')}}</td>
-  </tr>
-</table>
+<div>
+  <table class="word-environment">
+    <tr class="header-row">
+      <th>Occurs</th>
+      <th>Initially</th>
+      <th>Medially</th>
+      <th>Finally</th>
+    </tr>
+    <tr>
+      <th>Word</th>
+      <td><span [class]="getYN('wordInitial')"></span></td>
+      <td><span [class]="getYN('wordMedial')"></span></td>
+      <td><span [class]="getYN('wordFinal')"></span></td>
+    </tr>
+  </table>
+</div>

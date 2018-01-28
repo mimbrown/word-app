@@ -1,0 +1,25 @@
+<div class="phonemes">
+  <div class="phoneme-list">
+    <span>
+      Consonants:
+    </span>
+    <span *ngFor="let segment of consonants" class="phoneme" (click)="viewEnvironment(segment)">
+      {{segment.readable}}
+    </span>
+  </div>
+  <div class="phoneme-list">
+    <span>
+      Vowels:
+    </span>
+    <span *ngFor="let segment of vowels" class="phoneme" (click)="viewEnvironment(segment)">
+      {{segment.readable}}
+    </span>
+  </div>
+</div>
+<div>
+  <button [disabled]="!(environments.length > 1)">Establish Contrast</button>
+  <button [disabled]="!(environments.length > 1)" (click)="writeRule()">Write Rule</button>
+</div>
+<div class="environments">
+  <environment *ngFor="let segment of environments" [segment]="segment"></environment>
+</div>

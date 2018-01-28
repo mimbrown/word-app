@@ -58,7 +58,7 @@ export class EnvironmentComponent implements OnInit {
 
   getYN (env: string): string {
     let wordEnvironment = this.wordEnvironment;
-    return wordEnvironment && wordEnvironment[env] ? 'Y' : 'N';
+    return wordEnvironment && wordEnvironment[env] ? 'fa fa-check' : 'fa fa-times';
   }
 
 }
