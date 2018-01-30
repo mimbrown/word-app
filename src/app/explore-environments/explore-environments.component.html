@@ -17,9 +17,9 @@
   </div>
 </div>
 <div>
-  <button [disabled]="!(environments.length > 1)">Establish Contrast</button>
-  <button [disabled]="!(environments.length > 1)" (click)="writeRule()">Write Rule</button>
+  <button [disabled]="!(selected.size > 1)">Establish Contrast</button>
+  <button [disabled]="!(selected.size > 1)" (click)="writeRule()">Write Rule</button>
 </div>
 <div class="environments">
-  <environment *ngFor="let segment of environments" [segment]="segment"></environment>
+  <environment *ngFor="let segment of environments" #segmentEnvironment [segment]="segment" (click)="toggleSelected(segmentEnvironment)" [class.selected]="selected.has(segmentEnvironment)"></environment>
 </div>

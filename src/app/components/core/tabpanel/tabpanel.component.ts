@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'tabpanel',
@@ -25,17 +25,19 @@ export class TabpanelComponent {
 
 @Component({
   selector: 'tab',
-  template: `
-    <div [hidden]="!active">
-      <ng-content></ng-content>
-    </div>
-  `
+  // template: `
+  //   <div [hidden]="!active">
+  //     <ng-content></ng-content>
+  //   </div>
+  // `
+  template: '<ng-content></ng-content>'
 })
 export class Tab {
 
   @Input() tabTitle: string;
   // @Input() height: string = '100%';
   active: boolean;
+  @HostBinding('hidden') get inactive () {return !this.active}
 
   constructor(tabs: TabpanelComponent) {
     tabs.addTab(this);
