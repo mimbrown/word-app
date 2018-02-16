@@ -1,0 +1,8 @@
+:host {
+  display: flex;
+}
+
+.underlying-form, .environments {
+  display: flex;
+  flex-direction: column;
+}

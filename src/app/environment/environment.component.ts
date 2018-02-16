@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Segmental } from '../models/segmental';
 import { inventory } from '../data/inventory';
@@ -11,6 +11,8 @@ import { environment } from '../../environments/environment';
 })
 export class EnvironmentComponent implements OnInit {
   @Input() segment: Segmental;
+  @Output() removed: EventEmitter<EnvironmentComponent> = new EventEmitter();
+  @Output() addPSS: EventEmitter<Segmental> = new EventEmitter();
   environments: any[];
   previousEnvironment: any;
   nextEnvironment: any;
@@ -19,6 +21,18 @@ export class EnvironmentComponent implements OnInit {
 
   ngOnInit() {
     this.generateEnvironment();
+  }
+
+  remove (e: Event): void {
+    e.preventDefault();
+    e.stopPropagation();
+    this.removed.emit(this);
+  }
+  
+  getPSS (e: Event): void {
+    e.preventDefault();
+    e.stopPropagation();
+    this.addPSS.emit(this.segment);
   }
 
   generateEnvironment (): void {

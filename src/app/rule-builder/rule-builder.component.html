@@ -1,0 +1,16 @@
+<div class="underlying-form">
+  <div *ngFor="let environment of environments" class="segment">
+    /{{environment.segment.readable}}/
+  </div>
+</div>
+<div class="fa fa-long-arrow-right fa-2x"></div>
+<div class="environments">
+  <div *ngFor="let environment of environments" class="environment">
+    <span>
+      [{{environment.segment.readable}}] /
+    </span>
+    <span>
+      test
+    </span>
+  </div>
+</div>

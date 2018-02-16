@@ -6,6 +6,7 @@ import { Word } from '../models/word';
 import { Segmental } from '../models/segmental';
 
 import { inventory } from '../data/inventory';
+import { environment } from '../../../word-app-darwin-x64/word-app.app/Contents/Resources/app/src/environments/environment';
 
 @Component({
   selector: 'explore-environments',
@@ -13,22 +14,30 @@ import { inventory } from '../data/inventory';
   styleUrls: ['./explore-environments.component.scss']
 })
 export class ExploreEnvironmentsComponent implements OnInit {
-  @Input() vowels: Segmental[];
-  @Input() consonants: Segmental[];
-  environments: Segmental[] = [];
-  selected: Set<EnvironmentComponent> = new Set<EnvironmentComponent>();
+  // @Input() vowels: Segmental[];
+  // @Input() consonants: Segmental[];
+  @Input() environments: Segmental[];
+  selected: Set<EnvironmentComponent> = new Set();
+  buildingRule: boolean = false;
   constructor() { }
 
   ngOnInit() {
-    // this.consonants = inventory.getConsonants();
-    // this.vowels = inventory.getVowels();
+    
   }
 
-  viewEnvironment (segment: Segmental): void {
+  remove (comp: EnvironmentComponent): void {
     let environments = this.environments;
-    if (!environments.includes(segment)) {
-      environments.push(segment);
-    }
+    this.selected.delete(comp);
+    environments.splice(environments.indexOf(comp.segment), 1);
+  }
+
+  addPSS (segment: Segmental) {
+    let environments = this.environments;
+    inventory.segments.forEach((instances, seg) => {
+      if (segment.isPSS(seg) && !environments.includes(seg)) {
+        environments.push(seg);
+      }
+    });
   }
 
   toggleSelected (comp: EnvironmentComponent): void {
@@ -41,14 +50,15 @@ export class ExploreEnvironmentsComponent implements OnInit {
   }
 
   writeRule (): void {
-    let wordEnvironment;
-    this.selected.forEach(comp => {
-      if (wordEnvironment) {
-        console.log(this.checkAgainst(wordEnvironment, comp.wordEnvironment));
-      } else {
-        wordEnvironment = comp.wordEnvironment;
-      }
-    });
+    // let wordEnvironment;
+    // this.selected.forEach(comp => {
+    //   if (wordEnvironment) {
+    //     console.log(this.checkAgainst(wordEnvironment, comp.wordEnvironment));
+    //   } else {
+    //     wordEnvironment = comp.wordEnvironment;
+    //   }
+    // });
+    this.buildingRule = true;
   }
 
   checkAgainst (env: any, otherEnv: any) {
@@ -59,6 +69,10 @@ export class ExploreEnvironmentsComponent implements OnInit {
       }
     }
     return contrast;
+  }
+
+  closeRuleBuilder (): void {
+    this.buildingRule = false;
   }
 
 }

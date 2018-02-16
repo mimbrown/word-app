@@ -9,6 +9,12 @@ import { EnvironmentComponent } from './environment/environment.component';
 import { FeatureDisplayComponent } from './feature-display/feature-display.component';
 import { ExploreEnvironmentsComponent } from './explore-environments/explore-environments.component';
 import { TabpanelComponent, Tab } from './components/core/tabpanel/tabpanel.component';
+import { CleanDataComponent, AmbiguityComponent } from './clean-data/clean-data.component';
+import { WizardComponent, WizardTab } from './components/core/wizard/wizard.component';
+import { ProjectService } from './services/project.service';
+import { WindowComponent } from './components/core/window/window.component';
+import { RuleBuilderComponent } from './rule-builder/rule-builder.component';
+import { SyllabificationComponent } from './syllabification/syllabification.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,14 @@ import { TabpanelComponent, Tab } from './components/core/tabpanel/tabpanel.comp
     FeatureDisplayComponent,
     ExploreEnvironmentsComponent,
     TabpanelComponent,
-    Tab
+    Tab,
+    CleanDataComponent,
+    AmbiguityComponent,
+    WizardComponent,
+    WizardTab,
+    WindowComponent,
+    RuleBuilderComponent,
+    SyllabificationComponent
   ],
   exports: [
     CharacterComponent
@@ -27,7 +40,7 @@ import { TabpanelComponent, Tab } from './components/core/tabpanel/tabpanel.comp
     BrowserModule,
     HttpModule
   ],
-  providers: [WordParserService],
+  providers: [WordParserService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

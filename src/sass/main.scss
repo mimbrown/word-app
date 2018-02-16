@@ -18,3 +18,21 @@
 @import
     'components/button',
     'components/input';
+
+.selectable:hover {
+    cursor: pointer;
+    background-color: $selectable-background;
+}
+
+.selectable-lite:hover {
+    cursor: pointer;
+    color: $selectable-background;
+}
+
+.subdued {
+    color: lightgray;
+}
+
+.fill {
+    flex: 1;
+}

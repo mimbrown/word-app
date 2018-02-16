@@ -1,3 +1,4 @@
+@import '~sass/abstracts/variables';
 @import '~sass/abstracts/mixins';
 
 :host {
@@ -11,25 +12,31 @@
         padding: 20px;
     }
 }
-table {
-    height: 100%;
+td {
+    padding: 0 10px;
+}
+.selectable.phoneme {
+    border: 1px solid black;
 }
 tabpanel {
     flex: 1;
 }
 tab {
-    height: 100%;
+    padding: 10px;
+}
+wizard-tab {
+    width: 100%;
 }
 
-.entry-view {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+// .entry-view {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: rgba(0,0,0,0.7);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
 .window {
     background-color: white;
     height: 400px;
@@ -51,13 +58,30 @@ tab {
         padding: 10px;
         flex: 1;
         display: flex;
+        flex-direction: column;
         &.manually {
-            flex-direction: column;
             input {
                 margin: 2px 0;
             }
             border-right: 1px solid black;
         }
+    }
+    .project {
+        padding: 10px;
+        &.active {
+            background-color: $selectable-background;
+        }
+    }
+    &.check-words {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+    .word-list {
+        flex: 1;
+        display: flex;
+        overflow: auto;
+        justify-content: center;
     }
 }
 

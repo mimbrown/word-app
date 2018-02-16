@@ -1,10 +1,12 @@
 /* jshint esversion: 6 */
 
-const { app, BrowserWindow } = require('electron');
+const electron = require('electron');
+const server = require('./server');
+const { app, BrowserWindow } = electron;
 let win;
 
 function createWindow () {
-  const screen = require('electron').screen;
+  const screen = electron.screen;
   const { width, height } = screen.getPrimaryDisplay().workArea;
   // Create the browser window.
   win = new BrowserWindow({
@@ -14,14 +16,21 @@ function createWindow () {
     icon: `file://${__dirname}/dist/assets/logo.png`
   });
 
-  win.loadURL(`file://${__dirname}/dist/index.html`);
+  server.listen(3848, err => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    // win.loadURL(`file://${__dirname}/dist/index.html`);
+    win.loadURL(`http://localhost:3848`);
 
-  //// uncomment below to open the DevTools.
-  // win.webContents.openDevTools()
-  
-  // Event when the window is closed.
-  win.on('closed', function () {
-    win = null;
+    //// uncomment below to open the DevTools.
+    // win.webContents.openDevTools()
+    
+    // Event when the window is closed.
+    win.on('closed', function () {
+      win = null;
+    });
   });
 }
 
@@ -33,6 +42,8 @@ app.on('window-all-closed', function () {
   // On macOS specific close process
   if (process.platform !== 'darwin') {
     app.quit();
+  } else {
+    server.close();
   }
 });
 

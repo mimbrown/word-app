@@ -1,4 +1,4 @@
-<div class="phonemes">
+<!-- <div class="phonemes">
   <div class="phoneme-list">
     <span>
       Consonants:
@@ -15,11 +15,28 @@
       {{segment.readable}}
     </span>
   </div>
-</div>
+</div> -->
 <div>
   <button [disabled]="!(selected.size > 1)">Establish Contrast</button>
   <button [disabled]="!(selected.size > 1)" (click)="writeRule()">Write Rule</button>
 </div>
 <div class="environments">
-  <environment *ngFor="let segment of environments" #segmentEnvironment [segment]="segment" (click)="toggleSelected(segmentEnvironment)" [class.selected]="selected.has(segmentEnvironment)"></environment>
+  <environment *ngFor="let segment of environments" #segmentEnvironment
+    [segment]="segment"
+    (click)="toggleSelected(segmentEnvironment)"
+    (removed)="remove($event)"
+    (addPSS)="addPSS($event)"
+    [class.selected]="selected.has(segmentEnvironment)"></environment>
 </div>
+<window *ngIf="buildingRule">
+  <div class="window">
+    <div class="header">
+      <div class="title">
+        Rule Builder
+      </div>
+      <div class="fill"></div>
+      <div class="selectable-lite fa fa-times-circle fa-lg" (click)="closeRuleBuilder()"></div>
+    </div>
+    <rule-builder [environments]="selected"></rule-builder>
+  </div>
+</window>
