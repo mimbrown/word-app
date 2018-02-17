@@ -1,0 +1,30 @@
+@import '~sass/abstracts/variables';
+
+:host {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.top-level {
+  display: flex;
+  span {
+    padding: 5px;
+  }
+  border-bottom: 1px solid black;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  max-height: 150px;
+  overflow: scroll;
+  text-align: center;
+}
+
+.isUnselectable {
+  color: gray;
+}
+
+.selected {
+  background-color: $yellow;
+}

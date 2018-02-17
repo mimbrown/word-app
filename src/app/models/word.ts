@@ -28,10 +28,9 @@ export class Word {
     }
     segments = this.segments = [];
     let i = 0, len = word.length;
-    let curr, next;
+    let curr;
     for (; i < len; i++) {
       curr = word[i];
-      next = word[i+1];
       if (check.isTone(curr)) {
         i = this.collectTone(word, i);
         continue;
@@ -56,6 +55,7 @@ export class Word {
         i = this.collectWord(word, i);
         continue;
       }
+      inventory.badChars.set(curr, word);
     }
     // console.log(segments);
     // console.log(word);
@@ -233,6 +233,7 @@ export class Word {
 
   syllabify (): void {
     let segments = this.normalSegments;
+    let oldWord = !this.oldWord && this.readable;
     let seg1, seg2, seg3;
     let i = 1, len = segments.length;
     let breaks = [];
@@ -243,6 +244,9 @@ export class Word {
     }
     // if (breaks.length) console.log(this.readable, breaks);
     this.breaks = breaks;
+    if (oldWord && this.readable !== oldWord) {
+      this.oldWord = oldWord;
+    }
   }
 
   checkSyllableBreak (seg1: Segmental, seg2: Segmental, seg3: Segmental) {

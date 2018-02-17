@@ -22,6 +22,8 @@ app.route('/projects/:project')
   .get((req, res) => {
     let project = req.params.project;
     let words = [];
+    let splitRegEx = /\s+/;
+    let removeRegEx = /\./g;
     project = fs.readFileSync(path.join(projectsPath, project, `${project}.fwdata`));
     xml2js.parseString(project, (err, result) => {
       let tags = result.languageproject.rt;
@@ -29,10 +31,10 @@ app.route('/projects/:project')
       for (k in tags) {
         tag = tags[k];
         if (tag.$.class === 'LexPronunciation') {
-          words.push(tag.Form[0].AUni[0]._);
+          words.push.apply(words, tag.Form[0].AUni[0]._.replace(removeRegEx, '').split(splitRegEx));
         }
       }
-      res.json(words);
+      res.json(words.sort());
     });
   });
 

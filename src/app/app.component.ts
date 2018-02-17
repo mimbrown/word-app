@@ -64,6 +64,9 @@ export class AppComponent implements OnInit {
   }
 
   finishLoad (): void {
+    if (inventory.badChars.size) {
+      console.error(Array.from(inventory.badChars));
+    }
     this.refreshSegments();
     this.loaded = true;
   }

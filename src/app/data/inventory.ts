@@ -7,6 +7,7 @@ const segments: Map<Segmental, number> = new Map();
 const suprasegments: Set<Suprasegmental> = new Set<Suprasegmental>();
 const tones: Set<Tone> = new Set();
 const syllableBreak: Suprasegmental = new Suprasegmental('.');
+const badChars: Map<string, string> = new Map();
 
 const sort = (a: any, b: any): number => a.instances < b.instances ? 1 : a.instances === b.instances ? 0 : -1;
 
@@ -79,5 +80,6 @@ export const inventory = {
         return syllableTemplates;
     },
     words: null,
-    syllableBreak
+    syllableBreak,
+    badChars
 }

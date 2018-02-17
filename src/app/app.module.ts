@@ -15,6 +15,7 @@ import { ProjectService } from './services/project.service';
 import { WindowComponent } from './components/core/window/window.component';
 import { RuleBuilderComponent } from './rule-builder/rule-builder.component';
 import { SyllabificationComponent } from './syllabification/syllabification.component';
+import { EnvironmentChoiceComponent } from './environment-choice/environment-choice.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SyllabificationComponent } from './syllabification/syllabification.comp
     WizardTab,
     WindowComponent,
     RuleBuilderComponent,
-    SyllabificationComponent
+    SyllabificationComponent,
+    EnvironmentChoiceComponent
   ],
   exports: [
     CharacterComponent

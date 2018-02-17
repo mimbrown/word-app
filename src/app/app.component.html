@@ -61,7 +61,7 @@
       </div>
       <div class="enter file">
         <!-- <input type="file" (change)="fileChange($event)" placeholder="Drop a file" accept=".xml,.fwdata"> -->
-        <div *ngFor="let project of projects" class="selectable project" (click)="selectedProject = project" [class.active]="project === selectedProject">
+        <div *ngFor="let project of projects" class="selectable project" (click)="selectedProject = project" (dblclick)="loadData()" [class.active]="project === selectedProject">
           {{project}}
         </div>
       </div>

@@ -1,8 +1,30 @@
+@import '~sass/abstracts/variables';
+
 :host {
   display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.fa {
+  margin: 20px;
+}
+
+.selected {
+  background-color: $yellow;
 }
 
 .underlying-form, .environments {
   display: flex;
   flex-direction: column;
+  margin: 5px;
+}
+
+.environment {
+  display: flex;
+  margin: 5px;
+}
+
+environment-choice {
+  margin: 0 5px;
 }
