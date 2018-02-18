@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WordParserService } from './word-parser.service';
@@ -17,6 +18,7 @@ import { RuleBuilderComponent } from './rule-builder/rule-builder.component';
 import { SyllabificationComponent } from './syllabification/syllabification.component';
 import { EnvironmentChoiceComponent } from './environment-choice/environment-choice.component';
 import { PhoneticEnvironmentComponent } from './phonetic-environment/phonetic-environment.component';
+import { SyllableDistributionComponent } from './syllable-distribution/syllable-distribution.component';
 
 @NgModule({
   declarations: [
@@ -35,14 +37,16 @@ import { PhoneticEnvironmentComponent } from './phonetic-environment/phonetic-en
     RuleBuilderComponent,
     SyllabificationComponent,
     EnvironmentChoiceComponent,
-    PhoneticEnvironmentComponent
+    PhoneticEnvironmentComponent,
+    SyllableDistributionComponent
   ],
   exports: [
     CharacterComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [WordParserService, ProjectService],
   bootstrap: [AppComponent]

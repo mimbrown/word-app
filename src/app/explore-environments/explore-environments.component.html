@@ -57,10 +57,17 @@
           </div>
         </div>
       </div>
+      <div *ngIf="ruleCreated" class="rule-changes-display">
+        <div *ngFor="let changedWord of changedWords">
+          <input type="checkbox" [(ngModel)]="changedWord.accepted"> {{changedWord.oldVersion}} <span class="fa fa-long-arrow-right"></span> {{changedWord.newVersion}}
+        </div>
+      </div>
     </div>
     <div class="footer">
       <div class="fill"></div>
       <button (click)="generateRule(ruleBuilder)">Generate</button>
+      <button (click)="createRule(ruleBuilder)">Preview</button>
+      <button (click)="finishRule()">Finish</button>
     </div>
   </div>
 </window>

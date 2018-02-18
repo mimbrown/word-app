@@ -43,7 +43,7 @@
       <syllabification (refresh)="refreshSegments()"></syllabification>
     </wizard-tab>
     <wizard-tab tabTitle="Suspicious Pairs">
-      <explore-environments [environments]="selectedSegments"></explore-environments>
+      <explore-environments (refresh)="refreshSegments()" [environments]="selectedSegments"></explore-environments>
     </wizard-tab>
   </wizard>
 </div>

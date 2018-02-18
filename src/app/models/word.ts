@@ -9,13 +9,15 @@ export class Word {
   segments: AbstractSegmental[];
   oldWord: string;
   breaks: number[] = [];
+  isSyllabified: boolean = false;
 
   constructor (word: string) {
     this.parse(word);
   }
 
-  parse (word) {
-    let { segments, oldWord } = this;
+  parse (word: string) {
+    word = word.replace(/\./g, '');
+    let { segments, oldWord, isSyllabified } = this;
     if (segments) {
       segments.forEach(segment => segment instanceof Segmental && inventory.removeSegment(segment));
       if (oldWord) {
@@ -56,6 +58,9 @@ export class Word {
         continue;
       }
       inventory.badChars.set(curr, word);
+    }
+    if (isSyllabified) {
+      this.syllabify();
     }
     // console.log(segments);
     // console.log(word);
@@ -102,7 +107,7 @@ export class Word {
     // }
   }
 
-  collectTone (word: 'string', i: number): number {
+  collectTone (word: string, i: number): number {
     let str = word[i];
     let next = word[++i];
     while (check.isTone(next)) {
@@ -113,7 +118,7 @@ export class Word {
     return i-1;
   }
 
-  collectWord (word: 'string', i: number, isPre: boolean = false): number {
+  collectWord (word: string, i: number, isPre: boolean = false): number {
     let char = '';
     let curr = word[i];
     let isAffricate;
@@ -247,6 +252,7 @@ export class Word {
     if (oldWord && this.readable !== oldWord) {
       this.oldWord = oldWord;
     }
+    this.isSyllabified = true;
   }
 
   checkSyllableBreak (seg1: Segmental, seg2: Segmental, seg3: Segmental) {

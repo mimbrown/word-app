@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { EnvironmentComponent } from '../environment/environment.component';
 import { RuleBuilderComponent } from '../rule-builder/rule-builder.component';
@@ -9,6 +9,19 @@ import { Segmental } from '../models/segmental';
 import { inventory } from '../data/inventory';
 import { environment } from '../../../word-app-darwin-x64/word-app.app/Contents/Resources/app/src/environments/environment';
 
+class ChangedWord {
+  word: Word;
+  oldVersion: string;
+  newVersion: string;
+  accepted: boolean = true;
+
+  constructor (word: Word, newVersion: string) {
+    this.word = word;
+    this.oldVersion = word.readable;
+    this.newVersion = newVersion;
+  }
+}
+
 @Component({
   selector: 'explore-environments',
   templateUrl: './explore-environments.component.html',
@@ -18,11 +31,15 @@ export class ExploreEnvironmentsComponent implements OnInit {
   // @Input() vowels: Segmental[];
   // @Input() consonants: Segmental[];
   @Input() environments: Segmental[];
+  @Output() refresh: EventEmitter<any> = new EventEmitter();
 
   selected: Set<EnvironmentComponent> = new Set();
   buildingRule: boolean = false;
 
   generatedRule: boolean = false;
+  ruleCreated: boolean = false;
+
+  changedWords: ChangedWord[];
 
   constructor() { }
 
@@ -68,7 +85,19 @@ export class ExploreEnvironmentsComponent implements OnInit {
 
   generateRule (comp: RuleBuilderComponent): void {
     this.generatedRule = true;
-    // comp.phoneticEnvironments.forEach(phoneticEnvironment => )
+  }
+
+  createRule (comp: RuleBuilderComponent): void {
+    let changedWords: ChangedWord[] = [];
+    let str;
+    inventory.words.forEach(word => {
+      str = comp.process(word);
+      if (str) {
+        changedWords.push(new ChangedWord(word, str));
+      }
+    });
+    this.changedWords = changedWords;
+    this.ruleCreated = true;
   }
 
   checkAgainst (env: any, otherEnv: any) {
@@ -83,6 +112,17 @@ export class ExploreEnvironmentsComponent implements OnInit {
 
   closeRuleBuilder (): void {
     this.buildingRule = false;
+  }
+
+  finishRule (): void {
+    this.changedWords.forEach(changedWord => {
+      if (changedWord.accepted) {
+        changedWord.word.parse(changedWord.newVersion);
+      }
+    });
+    delete this.changedWords;
+    this.closeRuleBuilder();
+    this.refresh.emit();
   }
 
 }

@@ -30,6 +30,7 @@ environment.selected {
     background-color: white;
     display: flex;
     flex-direction: column;
+    max-height: 80vh;
 }
 
 rule-builder {
@@ -65,4 +66,12 @@ rule-builder {
 
 .hbox {
     display: flex;
+}
+
+.rule-changes-display {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: scroll;
+    border-left: 1px solid black;
 }
