@@ -1,3 +1,9 @@
-<p>
-  syllable-distribution works!
-</p>
+<button (click)="showSyllableDistribution()">Show Syllable Distribution</button>
+<div class="table-wrap">
+  <table class="distribution-table">
+    <thead>
+      <tr [innerHTML]="headerRow"></tr>
+    </thead>
+    <tbody [innerHTML]="bodyRows"></tbody>
+  </table>
+</div>

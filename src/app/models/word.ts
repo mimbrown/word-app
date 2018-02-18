@@ -205,7 +205,7 @@ export class Word {
     // return this.segments.filter(segment => segment instanceof Segmental);
   }
 
-  get syllableCVPatterns (): string[] {
+  get syllableCVPatterns (): any[] {
     let { breaks, normalSegments } = this;
     let patterns = [];
     let pattern;
@@ -302,6 +302,21 @@ export class Word {
       }
     });
     return str;
+  }
+  // test: boolean = true;
+  existsIn (segment: Segmental, template: string, index: number): boolean {
+    if (this.segments.includes(segment)) {
+      let { syllableCVPatterns, breaks, normalSegments } = this;
+      let includesSegment = false;
+      syllableCVPatterns.forEach((pattern, syllableIndex) => {
+        // if (template === pattern.pattern) console.log(this.readable, segment.readable, template, index);
+        if (template === pattern.pattern && normalSegments[index + (breaks[syllableIndex - 1] || 0)] === segment) {
+          includesSegment = true;
+        }
+      });
+      return includesSegment;
+    }
+    return false;
   }
   
   //   getPSS (char: string) {

@@ -45,6 +45,9 @@
     <wizard-tab tabTitle="Suspicious Pairs">
       <explore-environments (refresh)="refreshSegments()" [environments]="selectedSegments"></explore-environments>
     </wizard-tab>
+    <wizard-tab tabTitle="Syllable Distribution">
+      <syllable-distribution></syllable-distribution>
+    </wizard-tab>
   </wizard>
 </div>
 <window *ngIf="!loaded">

@@ -61,3 +61,30 @@
     //     padding-left: 5px;
     // }
 }
+
+.distribution-table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 2px;
+    border: 1px solid $blue;
+    .fa-check {
+        color: green;
+    }
+    .fa-times {
+        color: red;
+    }
+    th {
+        background-color: $blue;
+        color: white;
+    }
+    td, th {
+        padding: 5px;
+    }
+    .segment {
+        border-right: 1px solid $blue;
+    }
+    .mid {
+        border-right: 1px solid $blue;
+        border-left: 1px solid $blue;
+    }
+}
