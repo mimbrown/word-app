@@ -1,0 +1,23 @@
+@import '~sass/abstracts/variables';
+
+thead {
+  background-color: $blue;
+  color: white;
+  font-weight: bold;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}

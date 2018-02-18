@@ -7,4 +7,8 @@ export class AbstractSegmental {
     get readable () {
         return this.char;
     }
+
+    toString() {
+        return this.readable;
+    }
 }

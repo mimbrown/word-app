@@ -1,0 +1,42 @@
+<button (click)="syllabify()">
+  Ready to Syllabify
+</button>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Word-
+        </th>
+        <th>
+          Initial
+        </th>
+        <th>
+          Medial
+        </th>
+        <th>
+          Final
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let template of syllableTemplates">
+        <th>
+          {{template[0]}}
+        </th>
+        <td>
+          <span class="fa fa-lg" [class.fa-check]="template[1].initial" [class.fa-times]="!template[1].initial"></span>
+        </td>
+        <td>
+          <span class="fa fa-lg" [class.fa-check]="template[1].medial" [class.fa-times]="!template[1].medial"></span>
+        </td>
+        <td>
+          <span class="fa fa-lg" [class.fa-check]="template[1].final" [class.fa-times]="!template[1].final"></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <div *ngFor="let template of syllableTemplates">
+  {{template[0]}} -> {{template[1]}}
+</div> -->

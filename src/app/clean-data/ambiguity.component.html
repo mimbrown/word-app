@@ -1,0 +1,26 @@
+<table [class.inconsistent]="ambiguityGroup.inconsistent">
+  <thead class="selectable-lite" (click)="toggle()">
+    <tr>
+      <th *ngFor="let str of header()">
+        {{str}}
+      </th>
+      <!-- <th>
+        <span class="selectable-lite fa fa-check-circle"></span>
+      </th> -->
+    </tr>
+  </thead>
+  <tbody *ngIf="shown">
+    <tr>
+      <td *ngFor="let ambiguity of resolveButtons()">
+        <button *ngIf="ambiguity" (click)="resolveAll(ambiguity)">Resolve all here</button>
+      </td>
+    </tr>
+    <tr *ngFor="let ambiguousWord of allWords" class="selectable" (click)="rotate(ambiguousWord)">
+      <td *ngFor="let str of row(ambiguousWord)" [innerHtml]="str"></td>
+    </tr>
+  </tbody>
+</table>
+<span class="selectable-lite fa fa-check-circle fa-2x" (click)="resolved.emit(ambiguityGroup)"></span>
+<!-- <button class="mark-resolved" (click)="resolved.emit(ambiguityGroup)">
+  Mark Resolved
+</button> -->

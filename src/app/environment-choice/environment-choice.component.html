@@ -1,0 +1,10 @@
+<div class="top-level">
+  <span *ngFor="let top of topLevel" class="selectable" [class.selected]="selectedTopLevel === top" (click)="selectTopLevel(top)">
+    {{top.display}}
+  </span>
+</div>
+<div class="features" [class.isUnselectable]="!selectedTopLevel.hasFeatures">
+  <div *ngFor="let feature of features" [class.selectable]="selectedTopLevel.hasFeatures" [class.selected]="selectedFeatures.has(feature)" (click)="selectedTopLevel.hasFeatures && selectFeature(feature)">
+    {{getFeature(feature)}}
+  </div>
+</div>

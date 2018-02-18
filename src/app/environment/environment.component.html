@@ -1,3 +1,10 @@
+<div class="header">
+  <button (click)="getPSS($event)">
+    Get PSS
+  </button>
+  <div class="fill"></div>
+  <div class="selectable-lite close fa fa-times-circle fa-2x" (click)="remove($event)"></div>
+</div>
 <div class="immediate-env">
   <div>
     <div class="feature-heading">
@@ -38,6 +45,12 @@
       <td><span [class]="getYN('wordInitial')"></span></td>
       <td><span [class]="getYN('wordMedial')"></span></td>
       <td><span [class]="getYN('wordFinal')"></span></td>
+    </tr>
+    <tr>
+      <th>Syllable</th>
+      <td><span [class]="getYN('syllableInitial')"></span></td>
+      <td><span [class]="getYN('syllableMedial')"></span></td>
+      <td><span [class]="getYN('syllableFinal')"></span></td>
     </tr>
   </table>
 </div>

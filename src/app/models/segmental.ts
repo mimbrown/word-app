@@ -9,7 +9,7 @@ export class Segmental extends AbstractSegmental {
     normalChars: string;
 
     // features
-    type: string;
+    type: 'C' | 'V';
     voice: boolean;
     SG: boolean;
     CG: boolean;
@@ -51,7 +51,7 @@ export class Segmental extends AbstractSegmental {
         }
         if (check.isChar(curr)) {
             first = check.getDefinition(curr);
-            normalChars += first;
+            normalChars += curr;
             curr = char[++i];
         }
         while (curr && check.isDiacritic(curr)) {
@@ -66,7 +66,7 @@ export class Segmental extends AbstractSegmental {
             post = '';
             if (check.isChar(curr)) {
                 second = check.getDefinition(curr);
-                normalChars += second;
+                normalChars += curr;
                 curr = char[++i];
             }
             while (curr && check.isDiacritic(curr)) {
@@ -77,6 +77,7 @@ export class Segmental extends AbstractSegmental {
         this.pre = pre;
         this.mid = mid;
         this.post = post;
+        this.normalChars = normalChars;
         Object.assign(this, first, second);
     }
 
@@ -96,6 +97,18 @@ export class Segmental extends AbstractSegmental {
 
     get fricative () {
         return this.son === false && this.cont && !this.affricate;
+    }
+
+    get sonority () {
+        if (this.type === 'C') {
+            if (this.stop) return 1;
+            if (this.affricate) return 2;
+            if (this.fricative) return 3;
+            if (this.nasal) return 4;
+            if (this.lateral) return 5;
+            return 6;
+        }
+        return 7;
     }
 
     fillEnvironment (environment: any): void {
@@ -145,10 +158,29 @@ export class Segmental extends AbstractSegmental {
             if (this.coronal) environment.coronal = true;
             if (this.dorsal) environment.dorsal = true;
         }
+        environment[this.type] = true;
     }
 
     check (field: string, environment: any): void {
         if (!(this[field] === environment[field])) delete environment[field];
+    }
+
+    isPSS (segment: Segmental): boolean {
+        let chars1 = this.normalChars,
+            chars2 = segment.normalChars;
+        let i = 0, len1 = chars1.length;
+        let j, len2 = chars2.length;
+        for (; i < len1; i++) {
+            for (j = 0; j < len2; j++) {
+                if (check.isPhoneticallySimilar(chars1[i], chars2[j])) {
+                    return true;
+                }
+            }
+            // if (chars2.includes(chars1[i])) {
+            //     return true;
+            // }
+        }
+        return false;
     }
 
     // get readable() {

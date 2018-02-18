@@ -1,0 +1,36 @@
+:host {
+  margin: 5px;
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px;
+}
+
+td {
+  padding: 0 10px;
+  text-align: center;
+}
+
+thead {
+  background-color: #2B4970;
+  color: white;
+  font-weight: bold;
+}
+
+.inconsistent thead {
+  border-left: 10px solid red;
+}
+
+.mark-resolved {
+  align-self: flex-start;
+}
+
+.fa-check-circle {
+  padding: 5px;
+  color: #2B4970;
+}

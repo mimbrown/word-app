@@ -18,3 +18,73 @@
 @import
     'components/button',
     'components/input';
+
+.selectable:hover {
+    cursor: pointer;
+    background-color: $selectable-background;
+}
+
+.selectable-lite:hover {
+    cursor: pointer;
+    color: $selectable-background;
+}
+
+.subdued {
+    color: lightgray;
+}
+
+.fill {
+    flex: 1;
+}
+
+.features-stack {
+    display: flex;
+    .bracket {
+        width: 5px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        &.left {
+            border-left: 1px solid black;
+        }
+        &.right {
+            border-right: 1px solid black;
+        }
+    }
+    // &::before {
+    //     content: '[';
+    //     text-align: right;
+    //     padding-right: 5px;
+    // }
+    // &::after {
+    //     content: ']';
+    //     text-align: left;
+    //     padding-left: 5px;
+    // }
+}
+
+.distribution-table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 2px;
+    border: 1px solid $blue;
+    .fa-check {
+        color: green;
+    }
+    .fa-times {
+        color: red;
+    }
+    th {
+        background-color: $blue;
+        color: white;
+    }
+    td, th {
+        padding: 5px;
+    }
+    .segment {
+        border-right: 1px solid $blue;
+    }
+    .mid {
+        border-right: 1px solid $blue;
+        border-left: 1px solid $blue;
+    }
+}

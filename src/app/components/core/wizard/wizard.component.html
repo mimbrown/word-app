@@ -1,0 +1,23 @@
+<!-- <div class="header">
+  <div *ngFor="let tab of tabs" class="tab" [class.active]="tab.active" (click)="selectTab(tab)">
+    {{tab.tabTitle}}
+  </div>
+</div> -->
+<div class="fill">
+  <ng-content></ng-content>
+</div>
+<div class="wizard-navigation">
+  <div class="tab">
+    <div *ngIf="prevTab" class="prev-tab" (click)="selectTab(prevTab)">
+      <span class="fa fa-arrow-left"></span> {{prevTab.tabTitle}}
+    </div>
+  </div>
+  <div class="tab">
+    {{activeTab.tabTitle}}
+  </div>
+  <div class="tab">
+    <div *ngIf="nextTab" class="next-tab" (click)="selectTab(nextTab)">
+      {{nextTab.tabTitle}} <span class="fa fa-arrow-right"></span>
+    </div>
+  </div>
+</div>

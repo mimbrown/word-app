@@ -1,0 +1,51 @@
+:host {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+// .header {
+//     padding: 0;
+// }
+
+.wizard-navigation {
+    display: flex;
+    border-top: 1px solid #2B4970;
+    padding: 10px 0;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    // margin: 10px 0;
+    .prev-tab, .next-tab {
+        &:hover {
+            color: #2B4970;
+            cursor: pointer;
+        }
+    }
+    .prev-tab {
+        border-right: 1px solid #2B4970;
+    }
+    .next-tab {
+        border-left: 1px solid #2B4970;
+    }
+    // padding: 5px 10px;
+    // margin: 0 5px;
+    // background-color: white;
+    // color: black;
+    // &:hover {
+    //     cursor: pointer;
+    // }
+}
+
+.fill {
+    flex: 1;
+    display: flex;
+    overflow: scroll;
+}
+
+// .active {
+//     align-self: flex-end;
+//     padding-bottom: 13px;
+// }

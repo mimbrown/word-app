@@ -1,0 +1,13 @@
+<!-- <button (click)="showCVPattern()">CV Pattern</button>
+<button (click)="showAmbiguities()">Check Ambiguities</button>
+<table>
+  <tr *ngFor="let wordPattern of wordPatterns">
+    <td>
+      {{wordPattern.word}}
+    </td>
+    <td>
+      {{wordPattern.cvPattern}}
+    </td>
+  </tr>
+</table> -->
+<ambiguity *ngFor="let ambiguityGroup of ambiguities" [ambiguityGroup]="ambiguityGroup" (resolved)="resolve($event)"></ambiguity>

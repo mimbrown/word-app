@@ -1,4 +1,4 @@
-<div class="phonemes">
+<!-- <div class="phonemes">
   <div class="phoneme-list">
     <span>
       Consonants:
@@ -15,11 +15,59 @@
       {{segment.readable}}
     </span>
   </div>
-</div>
+</div> -->
 <div>
   <button [disabled]="!(selected.size > 1)">Establish Contrast</button>
   <button [disabled]="!(selected.size > 1)" (click)="writeRule()">Write Rule</button>
 </div>
 <div class="environments">
-  <environment *ngFor="let segment of environments" #segmentEnvironment [segment]="segment" (click)="toggleSelected(segmentEnvironment)" [class.selected]="selected.has(segmentEnvironment)"></environment>
+  <environment *ngFor="let segment of environments" #segmentEnvironment
+    [segment]="segment"
+    (click)="toggleSelected(segmentEnvironment)"
+    (removed)="remove($event)"
+    (addPSS)="addPSS($event)"
+    [class.selected]="selected.has(segmentEnvironment)"></environment>
 </div>
+<window *ngIf="buildingRule">
+  <div class="window">
+    <div class="header">
+      <div class="title">
+        Rule Builder
+      </div>
+      <div class="fill"></div>
+      <div class="selectable-lite fa fa-times-circle fa-lg" (click)="closeRuleBuilder()"></div>
+    </div>
+    <div class="body hbox">
+      <rule-builder #ruleBuilder [environments]="selected"></rule-builder>
+      <div *ngIf="generatedRule" class="rule-display">
+        <div class="rule">
+          <div>
+            /{{ruleBuilder.selectedEnvironment.segment.readable}}/ <span class="fa fa-long-arrow-right"></span>
+          </div>
+          <div class="rule-environments">
+            <div *ngFor="let phoneticEnvironment of ruleBuilder.phoneticEnvironments" class="rule-environment">
+              [{{phoneticEnvironment.environment.segment.readable}}] /
+              <div class="phonetic-environment" [innerHTML]="phoneticEnvironment.environmentChoices.first.getString()"></div>
+              ____
+              <div class="phonetic-environment" [innerHTML]="phoneticEnvironment.environmentChoices.last.getString()"></div>
+            </div>
+            <div>
+              [{{ruleBuilder.selectedEnvironment.segment.readable}}] / elsewhere
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="ruleCreated" class="rule-changes-display">
+        <div *ngFor="let changedWord of changedWords">
+          <input type="checkbox" [(ngModel)]="changedWord.accepted"> {{changedWord.oldVersion}} <span class="fa fa-long-arrow-right"></span> {{changedWord.newVersion}}
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="fill"></div>
+      <button (click)="generateRule(ruleBuilder)">Generate</button>
+      <button (click)="createRule(ruleBuilder)">Preview</button>
+      <button (click)="finishRule()">Finish</button>
+    </div>
+  </div>
+</window>
