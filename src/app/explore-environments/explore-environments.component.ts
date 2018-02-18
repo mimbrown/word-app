@@ -7,7 +7,6 @@ import { Word } from '../models/word';
 import { Segmental } from '../models/segmental';
 
 import { inventory } from '../data/inventory';
-import { environment } from '../../../word-app-darwin-x64/word-app.app/Contents/Resources/app/src/environments/environment';
 
 class ChangedWord {
   word: Word;

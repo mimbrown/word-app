@@ -20,7 +20,6 @@
     flex-wrap: wrap;
     align-items: flex-start;
     padding: 5px;
-    overflow: scroll;
 }
 environment.selected {
     background-color: #FFEDAA;
@@ -72,6 +71,6 @@ rule-builder {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    overflow: scroll;
+    overflow: auto;
     border-left: 1px solid black;
 }

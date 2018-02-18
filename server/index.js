@@ -8,7 +8,7 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 
-const projectsPath = os.platform() === 'win32' ? '' : '/Users/michaelbrown/Documents/GIAL/SoftwareProject/Projects/';
+const projectsPath = os.platform() === 'win32' ? 'C:\\ProgramData\\SIL\\FieldWorks\\Projects' : '/Users/michaelbrown/Documents/GIAL/SoftwareProject/Projects/';
 
 const app = express();
 
