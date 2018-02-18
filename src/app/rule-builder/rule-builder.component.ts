@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, QueryList, ViewChildren } from '@angular/core';
 
 import { EnvironmentComponent } from '../environment/environment.component';
+import { PhoneticEnvironmentComponent } from '../phonetic-environment/phonetic-environment.component';
 
 @Component({
   selector: 'rule-builder',
@@ -8,6 +9,7 @@ import { EnvironmentComponent } from '../environment/environment.component';
   styleUrls: ['./rule-builder.component.scss']
 })
 export class RuleBuilderComponent implements OnInit {
+  @ViewChildren(PhoneticEnvironmentComponent) phoneticEnvironments: QueryList<PhoneticEnvironmentComponent>;
   _environments: Set<EnvironmentComponent>;
   _selectedEnvironment: EnvironmentComponent;
   ruleEnvironments: Set<EnvironmentComponent>;

@@ -1,0 +1,18 @@
+<span>
+  [{{environment.segment.readable}}] / 
+</span>
+<environment-choice
+  class="prev-env"
+  [environment]="environment.previousEnvironment"
+  [wordBoundary]="environment.wordEnvironment.wordInitial"
+  [syllableBoundary]="environment.wordEnvironment.syllableInitial"
+></environment-choice>
+<span>
+  ____
+</span>
+<environment-choice
+  class="next-env"
+  [environment]="environment.nextEnvironment"
+  [wordBoundary]="environment.wordEnvironment.wordFinal"
+  [syllableBoundary]="environment.wordEnvironment.syllableFinal"
+></environment-choice>

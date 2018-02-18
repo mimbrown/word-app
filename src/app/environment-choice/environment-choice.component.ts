@@ -74,4 +74,20 @@ export class EnvironmentChoiceComponent implements OnInit {
     return `[${sign} ${feature}]`;
   }
 
+  getString (): string {
+    let { display, hasFeatures } = this.selectedTopLevel;
+    if (display === '<None>') {
+      return '';
+    } else {
+      if (hasFeatures) {
+        let featureArray = [];
+        let environment = this.environment;
+        this.selectedFeatures.forEach(feature => featureArray.push(`${environment[feature] ? '+' : '-'} ${feature}`));
+        return featureArray.length ? `<span>${display}<br><div class="features-stack"><div class="bracket left"></div><div class="features">${featureArray.join('<br>')}</div><div class="bracket right"></div></div></span>` : display;
+      } else {
+        return display;
+      }
+    }
+  }
+
 }

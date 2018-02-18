@@ -31,3 +31,38 @@ environment.selected {
     display: flex;
     flex-direction: column;
 }
+
+rule-builder {
+    flex: 1;
+}
+
+.rule-display {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid black;
+}
+
+.rule {
+    display: flex;
+    .fa {
+        padding: 0 10px;
+    }
+}
+
+.rule-environments {
+    display: flex;
+    flex-direction: column;
+}
+
+.rule-environment {
+    display: flex;
+    text-align: center;
+}
+
+.phonetic-environment {
+    padding: 0 10px;
+}
+
+.hbox {
+    display: flex;
+}

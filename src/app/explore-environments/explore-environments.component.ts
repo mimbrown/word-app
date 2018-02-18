@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { EnvironmentComponent } from '../environment/environment.component';
+import { RuleBuilderComponent } from '../rule-builder/rule-builder.component';
 
 import { Word } from '../models/word';
 import { Segmental } from '../models/segmental';
@@ -17,8 +18,12 @@ export class ExploreEnvironmentsComponent implements OnInit {
   // @Input() vowels: Segmental[];
   // @Input() consonants: Segmental[];
   @Input() environments: Segmental[];
+
   selected: Set<EnvironmentComponent> = new Set();
   buildingRule: boolean = false;
+
+  generatedRule: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -59,6 +64,11 @@ export class ExploreEnvironmentsComponent implements OnInit {
     //   }
     // });
     this.buildingRule = true;
+  }
+
+  generateRule (comp: RuleBuilderComponent): void {
+    this.generatedRule = true;
+    // comp.phoneticEnvironments.forEach(phoneticEnvironment => )
   }
 
   checkAgainst (env: any, otherEnv: any) {

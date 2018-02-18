@@ -16,6 +16,7 @@ import { WindowComponent } from './components/core/window/window.component';
 import { RuleBuilderComponent } from './rule-builder/rule-builder.component';
 import { SyllabificationComponent } from './syllabification/syllabification.component';
 import { EnvironmentChoiceComponent } from './environment-choice/environment-choice.component';
+import { PhoneticEnvironmentComponent } from './phonetic-environment/phonetic-environment.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EnvironmentChoiceComponent } from './environment-choice/environment-cho
     WindowComponent,
     RuleBuilderComponent,
     SyllabificationComponent,
-    EnvironmentChoiceComponent
+    EnvironmentChoiceComponent,
+    PhoneticEnvironmentComponent
   ],
   exports: [
     CharacterComponent

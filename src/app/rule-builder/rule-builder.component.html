@@ -5,8 +5,8 @@
 </div>
 <div class="fa fa-long-arrow-right fa-2x"></div>
 <div class="environments">
-  <div *ngFor="let environment of ruleEnvironments" class="environment">
-    <span>
+  <phonetic-environment *ngFor="let environment of ruleEnvironments" class="environment" [environment]="environment">
+    <!-- <span>
       [{{environment.segment.readable}}] / 
     </span>
     <environment-choice
@@ -21,8 +21,8 @@
       [environment]="environment.nextEnvironment"
       [wordBoundary]="environment.wordEnvironment.wordFinal"
       [syllableBoundary]="environment.wordEnvironment.syllableFinal"
-    ></environment-choice>
-  </div>
+    ></environment-choice> -->
+  </phonetic-environment>
   <div *ngIf="selectedEnvironment" class="environment">
     <span>
       [{{selectedEnvironment.segment.readable}}] / 
